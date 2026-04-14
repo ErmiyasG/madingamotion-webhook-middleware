@@ -9,7 +9,7 @@ import java.util.Base64;
 @Component
 public class SignatureValidator {
 
-    private static final String SECRET = "SDF23423sdfudsdf";
+    private static final String SECRET = "my-secret-key";
 
     public boolean isValid(String payload, String signature) {
         try {

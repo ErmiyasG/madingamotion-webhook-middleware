@@ -8,7 +8,7 @@ import java.io.InterruptedIOException;
 public class RetryService {
 
     public void execute(Runnable action) {
-        int attempts = 3;
+        int attempts = 3; // only allow retrying three times
 
         for (int i = 0; i < attempts; i++) {
             try {

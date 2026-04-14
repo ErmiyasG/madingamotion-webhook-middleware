@@ -55,7 +55,7 @@ X-Signature: <HMAC_SHA256_BASE64(payload)>
 
 **secrete key used**
 
-``` my-secret-key```
+```my-secret-key```
 
 # API endpints
 ```

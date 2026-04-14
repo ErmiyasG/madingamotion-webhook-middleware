@@ -34,11 +34,11 @@ public class WebhookController {
     }
 
     @PostMapping("/biotrack")
-    public void bitrack(@RequestBody BioTrackPayload payload) {
+    public void biotrack(@RequestBody BioTrackPayload payload) {
         StudentActivity a = new StudentActivity();
         a.studentId = payload.studentId;
         a.type = "BIOTRACK";
-        a.intensity = payload.intesity;
+        a.intensity = payload.intensity;
         a.timestamp = LocalDateTime.now();
 
         service.process(a);
