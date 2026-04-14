@@ -2,6 +2,7 @@ package org.postwork.er.madingamotion.service;
 
 import org.postwork.er.madingamotion.domain.StudentAggregate;
 import org.postwork.er.madingamotion.repository.StudentAggregateRepository;
+import org.postwork.er.madingamotion.util.TimeWindowUtil;
 import org.springframework.stereotype.Service;
 import org.postwork.er.madingamotion.domain.StudentActivity;
 
@@ -47,6 +48,6 @@ public class AggregationService {
     }
 
     private boolean isEligible(StudentAggregate agg) {
-        return agg.attendedRoda && agg.highIntensity && agg.rhythmMaintained;
+        return agg.attendedRoda && agg.highIntensity && agg.rhythmMaintained && TimeWindowUtil.withIn24Hours(agg.activities);
     }
 }
